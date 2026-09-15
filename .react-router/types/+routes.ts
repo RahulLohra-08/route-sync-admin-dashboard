@@ -14,20 +14,105 @@ type Pages = {
   "/": {
     params: {};
   };
+  "/admin": {
+    params: {};
+  };
+  "/admin/tracking": {
+    params: {};
+  };
+  "/admin/buses": {
+    params: {};
+  };
+  "/admin/drivers": {
+    params: {};
+  };
+  "/admin/routes": {
+    params: {};
+  };
+  "/admin/passengers": {
+    params: {};
+  };
+  "/admin/alerts": {
+    params: {};
+  };
+  "/admin/analytics": {
+    params: {};
+  };
+  "/admin/ai": {
+    params: {};
+  };
+  "/admin/settings": {
+    params: {};
+  };
 };
 
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/";
+    page: "/" | "/admin" | "/admin/tracking" | "/admin/buses" | "/admin/drivers" | "/admin/routes" | "/admin/passengers" | "/admin/alerts" | "/admin/analytics" | "/admin/ai" | "/admin/settings";
   };
   "routes/home.tsx": {
     id: "routes/home";
     page: "/";
+  };
+  "layouts/AdminLayout.tsx": {
+    id: "layouts/AdminLayout";
+    page: "/admin" | "/admin/tracking" | "/admin/buses" | "/admin/drivers" | "/admin/routes" | "/admin/passengers" | "/admin/alerts" | "/admin/analytics" | "/admin/ai" | "/admin/settings";
+  };
+  "features/dashboard/pages/DashboardPage.tsx": {
+    id: "features/dashboard/pages/DashboardPage";
+    page: "/admin";
+  };
+  "routes/admin/tracking.tsx": {
+    id: "routes/admin/tracking";
+    page: "/admin/tracking";
+  };
+  "routes/admin/buses.tsx": {
+    id: "routes/admin/buses";
+    page: "/admin/buses";
+  };
+  "routes/admin/drivers.tsx": {
+    id: "routes/admin/drivers";
+    page: "/admin/drivers";
+  };
+  "routes/admin/routes.tsx": {
+    id: "routes/admin/routes";
+    page: "/admin/routes";
+  };
+  "routes/admin/passengers.tsx": {
+    id: "routes/admin/passengers";
+    page: "/admin/passengers";
+  };
+  "routes/admin/alerts.tsx": {
+    id: "routes/admin/alerts";
+    page: "/admin/alerts";
+  };
+  "routes/admin/analytics.tsx": {
+    id: "routes/admin/analytics";
+    page: "/admin/analytics";
+  };
+  "routes/admin/ai.tsx": {
+    id: "routes/admin/ai";
+    page: "/admin/ai";
+  };
+  "routes/admin/settings.tsx": {
+    id: "routes/admin/settings";
+    page: "/admin/settings";
   };
 };
 
 type RouteModules = {
   "root": typeof import("./app/root.tsx");
   "routes/home": typeof import("./app/routes/home.tsx");
+  "layouts/AdminLayout": typeof import("./app/layouts/AdminLayout.tsx");
+  "features/dashboard/pages/DashboardPage": typeof import("./app/features/dashboard/pages/DashboardPage.tsx");
+  "routes/admin/tracking": typeof import("./app/routes/admin/tracking.tsx");
+  "routes/admin/buses": typeof import("./app/routes/admin/buses.tsx");
+  "routes/admin/drivers": typeof import("./app/routes/admin/drivers.tsx");
+  "routes/admin/routes": typeof import("./app/routes/admin/routes.tsx");
+  "routes/admin/passengers": typeof import("./app/routes/admin/passengers.tsx");
+  "routes/admin/alerts": typeof import("./app/routes/admin/alerts.tsx");
+  "routes/admin/analytics": typeof import("./app/routes/admin/analytics.tsx");
+  "routes/admin/ai": typeof import("./app/routes/admin/ai.tsx");
+  "routes/admin/settings": typeof import("./app/routes/admin/settings.tsx");
 };
