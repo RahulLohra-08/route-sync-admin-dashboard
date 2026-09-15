@@ -14,6 +14,9 @@ type Pages = {
   "/": {
     params: {};
   };
+  "/login": {
+    params: {};
+  };
   "/admin": {
     params: {};
   };
@@ -49,11 +52,15 @@ type Pages = {
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/" | "/admin" | "/admin/tracking" | "/admin/buses" | "/admin/drivers" | "/admin/routes" | "/admin/passengers" | "/admin/alerts" | "/admin/analytics" | "/admin/ai" | "/admin/settings";
+    page: "/" | "/login" | "/admin" | "/admin/tracking" | "/admin/buses" | "/admin/drivers" | "/admin/routes" | "/admin/passengers" | "/admin/alerts" | "/admin/analytics" | "/admin/ai" | "/admin/settings";
   };
   "routes/home.tsx": {
     id: "routes/home";
     page: "/";
+  };
+  "features/auth/pages/LoginPage.tsx": {
+    id: "features/auth/pages/LoginPage";
+    page: "/login";
   };
   "layouts/AdminLayout.tsx": {
     id: "layouts/AdminLayout";
@@ -104,6 +111,7 @@ type RouteFiles = {
 type RouteModules = {
   "root": typeof import("./app/root.tsx");
   "routes/home": typeof import("./app/routes/home.tsx");
+  "features/auth/pages/LoginPage": typeof import("./app/features/auth/pages/LoginPage.tsx");
   "layouts/AdminLayout": typeof import("./app/layouts/AdminLayout.tsx");
   "features/dashboard/pages/DashboardPage": typeof import("./app/features/dashboard/pages/DashboardPage.tsx");
   "routes/admin/tracking": typeof import("./app/routes/admin/tracking.tsx");
